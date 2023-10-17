@@ -22,3 +22,12 @@ In angular.json, under styles section, add
         "node_modules/primeicons/primeicons.css"
       ],
 ```
+## Add PrimeNG Card component
+### In ```app.module.ts``` add 
+``` import { CardModule } from 'primeng/card';``` and ```CardModule``` in imports array<br>
+### html file
+Copy and paste primeNG template to html file
+If running ng serve, need to restart to see the style apply<br>
+Make the p-card class w-6 to make it 60% width and change title to "Todo"
+
+## Add PrimeNG Table component
