@@ -1,7 +1,7 @@
 # ToDoList
 
 ## A. Setup
-### Install primeng, primeicons, primeflex
+### I. Install primeng, primeicons, primeflex
 ```
   npm i primeng primeicons primeflex
 ```
@@ -11,7 +11,7 @@ Check package.json to know if they installed or not
     "primeicons": "^6.0.1",
     "primeng": "^16.5.0",
 ```
-### Add styles
+### II. Add styles
 In angular.json, under styles section, add
 ```
     "styles": [
@@ -23,11 +23,11 @@ In angular.json, under styles section, add
       ],
 ```
 ## B. Add PrimeNG Card component
-### In ```app.module.ts``` add 
+### I. In ```app.module.ts``` add 
 ``` import { CardModule } from 'primeng/card';``` and ```CardModule``` in imports array<br>
-### html file
+### II. html file
 Copy and paste primeNG template to html file
 If running ng serve, need to restart to see the style apply<br>
 Make the p-card class w-6 to make it 60% width and change title to "Todo"
 
-## C. Add PrimeNG Table component insdie card body component
+## C. Add PrimeNG Table component
