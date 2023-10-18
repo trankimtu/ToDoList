@@ -31,3 +31,32 @@ If running ng serve, need to restart to see the style apply<br>
 Make the p-card class w-6 to make it 60% width and change title to "Todo"
 
 ## C. Add PrimeNG Table component
+```import { TableModule } from 'primeng/table';``` and ```TableModule``` in imports array<br>
+Pass ```todos``` array to the value property of ```p-table```<br>
+Define ```todos``` array in ```app.component.ts```<br>
+```
+    todos = [
+    {
+      id: 1,
+      task: 'first dodo',
+      completed: true
+    },
+    {
+      id: 2,
+      task: 'second dodo',
+      completed: false
+    },
+  ]
+```
+Use ```let-todo``` to load each object of array todos
+Output ```{{ todo.task }}``` to browser for testing
+
+## D. Add PrimeNG Checkbox component
+```import { CheckboxModule } from 'primeng/checkbox';``` and ```CheckboxModule``` in imports array<br>
+CheckboxModule is a form element which leads to
+```import { FormsModule } from '@angular/forms'; // for ngModel``` and ```FormsModule``` in imports array<br>
+Bind ```[(ngModel)]``` to ```todo.completed```
+
+## E. Add PrimeNG check button component
+```import { ButtonModule } from 'primeng/checkbox';``` and ```ButtonModule``` in imports array<br>
+
