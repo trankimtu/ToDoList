@@ -1,0 +1,75 @@
+<div class="flex flex-column align-items-center justify-content-center">
+  <p-card header="Todo" class="w-6">
+    <div class="m-2 flex">
+      <input
+        type="text"
+        pInputText
+        [(ngModel)]="task"
+        placeholder="Enter new todo"
+        #todoTask="ngModel"
+        required
+      />
+      <p-button
+        icon="pi pi-check" 
+        class="ml-1"
+        (onClick)="addTodo()"
+        [disabled]="!!todoTask.invalid"  
+      ></p-button>
+    </div>
+
+    <p class="m-0">
+      <p-table [value]="todos" (sort)="onSort($event)">
+        <ng-template pTemplate="header">
+          <tr>
+            <th 
+              pSortableColumn="column1"
+              class="text-center"
+            >
+              Task
+              <p-sortIcon [field]="'column1'"></p-sortIcon>
+            </th>
+
+            <th class="text-center">Completed</th>
+            <th class="text-center">Date</th>
+            <th class="text-center">Time</th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-todo>
+          <tr>
+            <!-- Input field -->
+            <td width="60%">{{ todo.task }}</td>
+
+            <!-- Checkbox -->
+            <td  class="text-center" width="5%">
+              <p-checkbox
+                [(ngModel)]="todo.completed"
+                [binary]="true"
+                (onChange)="updateTodo($event, todo)"
+              ></p-checkbox>
+            </td>
+
+            <!-- Date -->
+            <td>
+              {{ todo.date | date:'shortDate'}}
+            </td>
+
+            <!-- Time -->
+            <td>{{ todo.date | date:'shortTime'}}</td>
+
+            <td></td>
+            <td>
+              <p-button
+                icon="pi pi-trash"
+                severity="danger"
+                (onClick)="deleteTodo($event, todo?.id)"
+              ></p-button>
+            </td>
+            <td></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p>
+  </p-card>
+</div>
+

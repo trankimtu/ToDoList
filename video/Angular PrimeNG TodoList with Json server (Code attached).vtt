@@ -1,0 +1,1080 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.960 --> 00:00:06.000
+hi all welcome back in this video I am going&nbsp;
+to create a to-do application using angular&nbsp;&nbsp;
+
+00:00:06.000 --> 00:00:12.840
+and prime NG components so this is our to-do&nbsp;
+application which has a list add then update&nbsp;&nbsp;
+
+00:00:12.840 --> 00:00:19.320
+and delete as well so here is the input box if&nbsp;
+I am adding some dummy text and click on this&nbsp;&nbsp;
+
+00:00:19.320 --> 00:00:25.200
+button it will get added at the End by clicking&nbsp;
+the check box as completed it will update at&nbsp;&nbsp;
+
+00:00:25.200 --> 00:00:31.380
+this particular record so even after refresh it&nbsp;
+will be the same and you can delete the record&nbsp;&nbsp;
+
+00:00:31.380 --> 00:00:36.120
+then it will be removed from the list this is&nbsp;
+what I am going to do on the coming section
+
+00:00:38.340 --> 00:00:45.300
+so let's get started so I already installed an&nbsp;
+angular application using the command ng new right&nbsp;&nbsp;
+
+00:00:45.300 --> 00:00:50.880
+once this angular project has been installed&nbsp;
+you can run the application using the command&nbsp;&nbsp;
+
+00:00:50.880 --> 00:00:57.900
+ng server you just give ng serve then it will&nbsp;
+already open our application in 4200 you can go&nbsp;&nbsp;
+
+00:00:57.900 --> 00:01:04.020
+to the browser and you can enter 4000 localhost&nbsp;
+4200 then it will show an application like this&nbsp;&nbsp;
+
+00:01:05.640 --> 00:01:11.340
+then you can go to the SRC folder app and in the&nbsp;
+app.component.html these are the content which is&nbsp;&nbsp;
+
+00:01:11.340 --> 00:01:18.720
+showing in your browser so I'm just clearing&nbsp;
+it and I am simply giving div hello world
+
+00:01:22.320 --> 00:01:28.020
+you can see it is reflected so now&nbsp;
+angular application has been the&nbsp;&nbsp;
+
+00:01:28.020 --> 00:01:32.760
+angular project is installed next&nbsp;
+up is you have to install Prime NG&nbsp;&nbsp;
+
+00:01:32.760 --> 00:01:39.180
+and the supported Prime icons and the&nbsp;
+prime Flex for the CSS classes Okay so&nbsp;&nbsp;
+
+00:01:40.980 --> 00:01:50.880
+go to new terminal and you can give the command&nbsp;
+npm install Prime Ng Prime icons then Prime Flex&nbsp;&nbsp;
+
+00:01:52.380 --> 00:01:57.600
+so it's up to you if you are using different icons&nbsp;
+or different CSS class you can install that one&nbsp;&nbsp;
+
+00:01:57.600 --> 00:02:02.160
+now I am using all the primary related&nbsp;
+stuff so primary Prime icons Prime flux
+
+00:02:05.220 --> 00:02:07.140
+so this will take some time to install
+
+00:02:10.800 --> 00:02:15.720
+once that has been installed you can go and&nbsp;
+check in the package.json file these three&nbsp;&nbsp;
+
+00:02:16.500 --> 00:02:22.620
+packages is installed okay so the next thing is&nbsp;
+like in order to use the primary related stuff&nbsp;&nbsp;
+
+00:02:22.620 --> 00:02:29.580
+you can go to angular.json file and in the style&nbsp;
+section you have to add the theme which theme you&nbsp;&nbsp;
+
+00:02:29.580 --> 00:02:35.580
+want and which prime NG um you know the prime NG&nbsp;
+minified file and the primary flux CSS needs to&nbsp;&nbsp;
+
+00:02:35.580 --> 00:02:41.280
+be added in the style sections if you have any&nbsp;
+confusion you can go to the prime NG website
+
+00:02:43.380 --> 00:02:47.640
+and in the installation gate they are&nbsp;
+mentioning if you are installing the&nbsp;&nbsp;
+
+00:02:47.640 --> 00:02:51.840
+prime NG you can add the CSS like this&nbsp;
+and if you want more information about&nbsp;&nbsp;
+
+00:02:51.840 --> 00:02:55.620
+the prime Flex installation you&nbsp;
+can go and search for Prime Flex
+
+00:02:57.840 --> 00:03:02.280
+so Prime Flex installation is also there in the&nbsp;
+setup you are they are mentioning Prime flux&nbsp;&nbsp;
+
+00:03:02.280 --> 00:03:07.980
+CSS needs to be imported so those three sections&nbsp;
+are added in the Styles array then regarding the&nbsp;&nbsp;
+
+00:03:07.980 --> 00:03:15.900
+prime icons in order to use the prime icons go to&nbsp;
+this style.css file and you have to give at import&nbsp;&nbsp;
+
+00:03:15.900 --> 00:03:22.680
+Prime icons CSS at import Prime icon then Prime&nbsp;
+icon CSS files once these things has been done&nbsp;&nbsp;
+
+00:03:22.680 --> 00:03:29.580
+your Prime NG setup is complete now we can check&nbsp;
+the prime NG is working fine or not okay for that&nbsp;&nbsp;
+
+00:03:29.580 --> 00:03:35.280
+what I am going to do is I am going to take the&nbsp;
+primary component Prime and G card component okay&nbsp;&nbsp;
+
+00:03:36.180 --> 00:03:39.000
+so I'm going to take the card&nbsp;
+component of the Prime Ng&nbsp;&nbsp;
+
+00:03:40.800 --> 00:03:45.960
+so this is a card component so first you have to&nbsp;
+import the card module and go to your application&nbsp;&nbsp;
+
+00:03:47.100 --> 00:03:51.900
+so I'm closing all other files going to the&nbsp;
+application there will be a single module so&nbsp;&nbsp;
+
+00:03:51.900 --> 00:03:59.580
+app dot module dot in your application you can&nbsp;
+go to this file and add the card module and that&nbsp;&nbsp;
+
+00:03:59.580 --> 00:04:06.360
+needs to be added in the Imports array so the&nbsp;
+card module is imported again in order to use&nbsp;&nbsp;
+
+00:04:06.360 --> 00:04:12.540
+the card you have to use the P card in the HTML so&nbsp;
+you can copy this content from here and go to the&nbsp;&nbsp;
+
+00:04:12.540 --> 00:04:20.760
+HTML file and override this hello world with the&nbsp;
+p card with the title and some data so go to the
+
+00:04:22.800 --> 00:04:27.240
+application so you can see this Prime NG&nbsp;
+is not reflected the card is not looking&nbsp;&nbsp;
+
+00:04:27.240 --> 00:04:33.300
+like this right so once you have do any&nbsp;
+changes in your angular.json file you&nbsp;&nbsp;
+
+00:04:33.300 --> 00:04:38.640
+have to restart okay so I I was&nbsp;
+running the application now you&nbsp;&nbsp;
+
+00:04:38.640 --> 00:04:43.080
+can exit the application and you can&nbsp;
+run again using the NG serve command
+
+00:04:53.460 --> 00:05:01.320
+okay now you can see the changes is reflecting&nbsp;
+now and my card is also available so the prime NG&nbsp;&nbsp;
+
+00:05:01.320 --> 00:05:07.560
+setup is also completed so our next step is like&nbsp;
+we are going to build a to-do application first&nbsp;&nbsp;
+
+00:05:07.560 --> 00:05:13.680
+there will be a list then an ad then edit delete&nbsp;
+so first we will concentrate on creating a list&nbsp;&nbsp;
+
+00:05:13.680 --> 00:05:19.380
+okay for creating before creating a list we can&nbsp;
+make it as sender aligned so in order to use it&nbsp;&nbsp;
+
+00:05:19.380 --> 00:05:26.280
+as a sender align there will be some Flex classes&nbsp;
+so what you can do is if you want to go for the&nbsp;&nbsp;
+
+00:05:26.280 --> 00:05:31.560
+tutorial of the Prime Flex you can go ahead&nbsp;
+now what I am doing I am going to create a div
+
+00:05:33.780 --> 00:05:37.500
+with these many classes so&nbsp;
+there is a flex class Flex&nbsp;&nbsp;
+
+00:05:37.500 --> 00:05:40.560
+column Alain item sender justify content Center
+
+00:05:45.120 --> 00:05:52.260
+so once this has been done and you can&nbsp;
+give a class of width 60 percentage
+
+00:05:54.600 --> 00:06:01.680
+so it will take a it is like a call md6 okay so&nbsp;
+call six it will take this much part and we are&nbsp;&nbsp;
+
+00:06:01.680 --> 00:06:06.420
+added Flex Flex column all in item sender and&nbsp;
+the Justified candle so now this looks okay&nbsp;&nbsp;
+
+00:06:07.140 --> 00:06:12.180
+so I am changing the header to to&nbsp;
+do the next thing is you have to&nbsp;&nbsp;
+
+00:06:12.180 --> 00:06:17.640
+add a table so go to the prime and G and&nbsp;
+you can search for the table component
+
+00:06:22.080 --> 00:06:28.980
+so table component I will import that one in&nbsp;
+the app dot module.ts file table component&nbsp;&nbsp;
+
+00:06:29.520 --> 00:06:35.880
+that table module needs to be added in the&nbsp;
+import section then you can see the P table&nbsp;&nbsp;
+
+00:06:35.880 --> 00:06:42.720
+this code you can copy from here and paste&nbsp;
+it in the HTML file so here I am removing&nbsp;&nbsp;
+
+00:06:44.100 --> 00:06:52.500
+this one instead of this one I am giving like&nbsp;
+this I'm not adding any table style so here the&nbsp;&nbsp;
+
+00:06:52.500 --> 00:06:58.860
+products this products needs to be either come&nbsp;
+from the API now before adding the APA related&nbsp;&nbsp;
+
+00:06:58.860 --> 00:07:05.820
+stuff I will give this products a static value&nbsp;
+so go to the Aptoide component.ts file and you&nbsp;&nbsp;
+
+00:07:05.820 --> 00:07:13.140
+can give the products equal to an array of&nbsp;
+I am giving ID as 1 and I am giving a task&nbsp;&nbsp;
+
+00:07:14.460 --> 00:07:25.980
+as first to do then I am giving a flag called&nbsp;
+completed as false so I have these three things&nbsp;&nbsp;
+
+00:07:27.660 --> 00:07:32.580
+then come to the HTML part I only have a&nbsp;
+three columns so the one is four the task&nbsp;&nbsp;
+
+00:07:32.580 --> 00:07:36.600
+one is for the completed and one is for the&nbsp;
+delete icon so I'm just starting the three&nbsp;&nbsp;
+
+00:07:37.140 --> 00:07:41.400
+and one is for the task and&nbsp;
+another one is for completed&nbsp;&nbsp;
+
+00:07:42.960 --> 00:07:49.740
+and this one there is no heading so here instead&nbsp;
+of the product I am telling like it is a to-do&nbsp;&nbsp;
+
+00:07:49.740 --> 00:07:56.400
+so this is the variable it is referring so instead&nbsp;
+of products we can change the variable to to those&nbsp;&nbsp;
+
+00:07:57.420 --> 00:08:02.760
+and I am giving the same variable here&nbsp;
+and I am telling each to do except to do&nbsp;&nbsp;
+
+00:08:04.020 --> 00:08:14.220
+it will take the each object and the first First&nbsp;
+Column will be to do dot task the second will be&nbsp;&nbsp;
+
+00:08:15.540 --> 00:08:22.320
+to do dot it should be a checkbox but I will&nbsp;
+change it later so to do dot completed then&nbsp;&nbsp;
+
+00:08:22.320 --> 00:08:28.740
+there should be a delete icon so in order to use&nbsp;
+a delete icon you have to use a button component&nbsp;&nbsp;
+
+00:08:28.740 --> 00:08:34.140
+so before moving to the button component we have&nbsp;
+to make sure the table is working fine or not so&nbsp;&nbsp;
+
+00:08:34.740 --> 00:08:40.560
+let's go to the application you can see the task&nbsp;
+completed and there is one column is there which&nbsp;&nbsp;
+
+00:08:40.560 --> 00:08:46.800
+is empty so it is working fine the next is we&nbsp;
+will go and add the delete so there should be a&nbsp;&nbsp;
+
+00:08:46.800 --> 00:08:51.600
+button and there should be a checkbox so these are&nbsp;
+the two things we have to do next so going to the&nbsp;&nbsp;
+
+00:08:53.400 --> 00:08:57.180
+check box component first so the basic checkbox&nbsp;&nbsp;
+
+00:08:57.720 --> 00:09:04.080
+you have to import the checkbox module so you&nbsp;
+can go to the module section import the check&nbsp;&nbsp;
+
+00:09:04.080 --> 00:09:10.200
+box and the checkbox module is a form element so&nbsp;
+you have to either use a NG model or a reactive&nbsp;&nbsp;
+
+00:09:10.200 --> 00:09:16.200
+form so since I am using NG model I am going&nbsp;
+to import forms module from the angular forms&nbsp;&nbsp;
+
+00:09:16.860 --> 00:09:21.540
+so whenever you are using any form components you&nbsp;
+have to use a form module or the reactive form
+
+00:09:24.420 --> 00:09:30.480
+so this should be imported from the angular&nbsp;
+forms then the same thing needs to be added&nbsp;&nbsp;
+
+00:09:30.480 --> 00:09:37.860
+in the import section then go to the HTML you&nbsp;
+have to copy this one so P checkbooks NG model
+
+00:09:40.320 --> 00:09:46.620
+so you can go to here and instead of&nbsp;
+the to-do completed you can give the&nbsp;&nbsp;
+
+00:09:46.620 --> 00:09:52.560
+speechbox and instead of this checked&nbsp;
+one you can give to do Dot completed
+
+00:09:55.260 --> 00:09:59.880
+and if you don't need you want to use this&nbsp;
+input ID so I'm just using only these two things&nbsp;&nbsp;
+
+00:10:00.600 --> 00:10:06.660
+so let's see whether it is working or not&nbsp;
+so the checkbox came now the next thing we&nbsp;&nbsp;
+
+00:10:06.660 --> 00:10:11.220
+have to add a button with the delete icon&nbsp;
+right so you have to search for the button&nbsp;&nbsp;
+
+00:10:12.840 --> 00:10:17.760
+then you have to import the button&nbsp;
+module so copy that one and import here&nbsp;&nbsp;
+
+00:10:18.540 --> 00:10:25.200
+then add the button module after add the&nbsp;
+button module you can check there will&nbsp;&nbsp;
+
+00:10:25.200 --> 00:10:33.360
+be icon available the similar way you can&nbsp;
+copy the button from here and you can add&nbsp;&nbsp;
+
+00:10:33.360 --> 00:10:39.660
+it instead of icon you can add here here&nbsp;
+instead of p i check you can add PA trash
+
+00:10:44.400 --> 00:10:48.480
+and the button is in a blue color now&nbsp;
+you have to make it as a red color so&nbsp;&nbsp;
+
+00:10:48.480 --> 00:10:50.940
+you have to give a class called P button Danger
+
+00:10:56.040 --> 00:11:03.060
+so you got the task you got the check box and&nbsp;
+also you got a drop down so in order to make&nbsp;&nbsp;
+
+00:11:03.060 --> 00:11:09.780
+the width properly what I am going to do is&nbsp;
+I am giving here width sorry width equal to&nbsp;&nbsp;
+
+00:11:11.220 --> 00:11:18.000
+60 percentage and for this last delete button I&nbsp;
+am giving the width equal to 5 percentage so it&nbsp;&nbsp;
+
+00:11:18.000 --> 00:11:25.080
+will looks more good see now we can check whether&nbsp;
+by default if it is completed will it checked or&nbsp;&nbsp;
+
+00:11:25.080 --> 00:11:30.300
+not so go to the TS file where the tools has&nbsp;
+been returned and you just try to make it as&nbsp;&nbsp;
+
+00:11:30.300 --> 00:11:35.760
+a false and check whether it is working fine&nbsp;
+or not okay so if I am repeating this chord&nbsp;&nbsp;
+
+00:11:37.260 --> 00:11:46.440
+with the ID to second to do and I'm making it&nbsp;
+as a false you can see it is reflecting properly&nbsp;&nbsp;
+
+00:11:48.240 --> 00:11:54.780
+yeah next step is once we click on this checkbox&nbsp;
+we have to update this particular record so we&nbsp;&nbsp;
+
+00:11:54.780 --> 00:12:01.260
+will make sure on change we are getting the&nbsp;
+proper data so for that go to the HTML part&nbsp;&nbsp;
+
+00:12:01.260 --> 00:12:07.740
+and wherever you have written the check box you&nbsp;
+can call on change event so on change event we&nbsp;&nbsp;
+
+00:12:07.740 --> 00:12:16.440
+will call a function update to do and you will&nbsp;
+get an event and also we will pass the studio
+
+00:12:18.720 --> 00:12:23.820
+okay and we will create this function and will&nbsp;
+make sure whether all the data we are receiving&nbsp;&nbsp;
+
+00:12:23.820 --> 00:12:31.200
+it or not here so in the app dot component you can&nbsp;
+create the same function and we are receiving this&nbsp;&nbsp;
+
+00:12:31.200 --> 00:12:37.440
+one event now I am putting it as an unknown we&nbsp;
+don't know the type then the next thing is to do&nbsp;&nbsp;
+
+00:12:38.100 --> 00:12:44.820
+so the to-do type I have to Define it here so in&nbsp;
+order to Define an interface you have to go to the&nbsp;&nbsp;
+
+00:12:45.420 --> 00:12:49.020
+terminal and you can create an&nbsp;
+interface file so either you can&nbsp;&nbsp;
+
+00:12:49.020 --> 00:12:54.180
+go and create an interface file from here&nbsp;
+or using the angular CLA you can use a&nbsp;&nbsp;
+
+00:12:54.180 --> 00:13:00.000
+command NG G4 generate I4 interface&nbsp;
+and you can tell the name the to do
+
+00:13:03.960 --> 00:13:11.040
+so the 22.ts file is generated here and Export&nbsp;
+interface to do so in that you can mention my&nbsp;&nbsp;
+
+00:13:11.040 --> 00:13:19.080
+interface is looks like ID is the optional so it&nbsp;
+will be the number and there is a task which is a&nbsp;&nbsp;
+
+00:13:19.080 --> 00:13:28.800
+string and there is completed which is a Boolean&nbsp;
+so you got the to-do so you can tell my to do&nbsp;&nbsp;
+
+00:13:28.800 --> 00:13:35.760
+interfaces like this and also if you press the&nbsp;
+Ctrl Dot you will you will see the Auto Import&nbsp;&nbsp;
+
+00:13:35.760 --> 00:13:45.480
+option so add import from to do so that is also&nbsp;
+added then you can check consult or log of e is&nbsp;&nbsp;
+
+00:13:45.480 --> 00:13:55.620
+the event to do is the data receiving from that&nbsp;
+checkbox so inspect element in the console section
+
+00:13:59.100 --> 00:14:04.260
+I am clearing this one and if I checked&nbsp;
+you can see the checked equal to false&nbsp;&nbsp;
+
+00:14:04.260 --> 00:14:09.840
+and also I am getting the current row to&nbsp;
+do data so if I click on the second I am&nbsp;&nbsp;
+
+00:14:09.840 --> 00:14:14.760
+getting check this true and the clicked&nbsp;
+data okay so I am getting the full data&nbsp;&nbsp;
+
+00:14:15.480 --> 00:14:21.600
+so that is working fine so we will make it you&nbsp;
+know we will call the API on the next step now&nbsp;&nbsp;
+
+00:14:21.600 --> 00:14:26.820
+we will go ahead with this one the similar way&nbsp;
+what you have to do is like while clicking on&nbsp;&nbsp;
+
+00:14:26.820 --> 00:14:34.140
+the delete icon also you have to call a function&nbsp;
+so you can do on click since it is a button you&nbsp;&nbsp;
+
+00:14:34.140 --> 00:14:39.480
+can give own click and also you can write&nbsp;
+a function delete to do and you can pass&nbsp;&nbsp;
+
+00:14:40.380 --> 00:14:46.500
+event then also you can pass the product ID&nbsp;
+you don't need the product full data because&nbsp;&nbsp;
+
+00:14:46.500 --> 00:14:51.660
+updating you need but for the delete you only&nbsp;
+need the product ID so I am passing product ID&nbsp;&nbsp;
+
+00:14:53.160 --> 00:15:00.720
+so I am going to create the same function here so&nbsp;
+delete to do and event you can give any or unknown&nbsp;&nbsp;
+
+00:15:00.720 --> 00:15:09.660
+if you are not aware then I am giving the ID as&nbsp;
+the to do ID this is the interface it will be the&nbsp;&nbsp;
+
+00:15:09.660 --> 00:15:24.480
+same okay so here I am giving console.log of e&nbsp;
+and also ID save and here you can see sorry this&nbsp;&nbsp;
+
+00:15:24.480 --> 00:15:32.280
+is not the product this is the to do so to dot ID&nbsp;
+so if you go to the application inspect element&nbsp;&nbsp;
+
+00:15:33.300 --> 00:15:41.640
+on the console click on the delete you will get&nbsp;
+the ID as2 and also you will get the event so&nbsp;&nbsp;
+
+00:15:41.640 --> 00:15:48.360
+ID and event okay so that part is completed so&nbsp;
+the next thing is you have to create an ad to&nbsp;&nbsp;
+
+00:15:48.360 --> 00:15:54.480
+do right now the edit is done with the dummy data&nbsp;
+the listing is done the delete is also done with&nbsp;&nbsp;
+
+00:15:54.480 --> 00:16:01.560
+the dummy data so you have to create a new to&nbsp;
+do so for that you have to create an input box&nbsp;&nbsp;
+
+00:16:01.560 --> 00:16:06.720
+you you should have an input box so in order to&nbsp;
+give the input box you have to go to the antler&nbsp;&nbsp;
+
+00:16:06.720 --> 00:16:12.240
+component and search for the input so input text&nbsp;
+component you will copy you can copy from here&nbsp;&nbsp;
+
+00:16:12.780 --> 00:16:21.780
+and add it in the app dot module.js file then&nbsp;
+input text module is added since it already added&nbsp;&nbsp;
+
+00:16:21.780 --> 00:16:26.340
+the forms module I don't have to add it again so&nbsp;
+input text module is a form element which should&nbsp;&nbsp;
+
+00:16:26.340 --> 00:16:31.680
+have a forms module so that is already included&nbsp;
+then go to the HTML part so above the table we&nbsp;&nbsp;
+
+00:16:31.680 --> 00:16:37.920
+will do creating an input okay so what I will&nbsp;
+do is in the card section I will create a Dev&nbsp;&nbsp;
+
+00:16:39.480 --> 00:16:48.240
+and I am giving a class this is margin two and&nbsp;
+also I am giving a class called Flex then I will&nbsp;&nbsp;
+
+00:16:48.240 --> 00:16:54.900
+separate it with the two so one div is there in&nbsp;
+which we have a input box and also I am going to&nbsp;&nbsp;
+
+00:16:54.900 --> 00:17:03.300
+add a new button so new button it's a check button&nbsp;
+so I'm just removing these stuffs for now so I'm&nbsp;&nbsp;
+
+00:17:03.300 --> 00:17:09.660
+adding a button and also I'm going to add an input&nbsp;
+text okay so the input text you can go to this&nbsp;&nbsp;
+
+00:17:09.660 --> 00:17:15.900
+input text module and you can copy the same from&nbsp;
+here so input text then P input text you have to&nbsp;&nbsp;
+
+00:17:15.900 --> 00:17:22.380
+give the NG model so what I am going to give an NG&nbsp;
+model is the task so here you have to declare that&nbsp;&nbsp;
+
+00:17:22.380 --> 00:17:31.080
+variable task so I'm just removing the title from&nbsp;
+here and the task is equal to empty for now so&nbsp;&nbsp;
+
+00:17:31.080 --> 00:17:39.240
+you can see the error band next you can give the&nbsp;
+placeholder and I am telling its Ender new to do
+
+00:17:42.780 --> 00:17:49.620
+let's see how our application looks now so you&nbsp;
+can see to do and also you can see a button right&nbsp;&nbsp;
+
+00:17:49.620 --> 00:17:55.620
+the next thing is like without entering the&nbsp;
+data the button should not be enabled right&nbsp;&nbsp;
+
+00:17:55.620 --> 00:18:01.320
+now I can type anything and if I want you know I&nbsp;
+can type the space and you can press the button&nbsp;&nbsp;
+
+00:18:01.320 --> 00:18:07.440
+so what you have to do is you have to disable the&nbsp;
+button if there is no data so in order to do that&nbsp;&nbsp;
+
+00:18:08.520 --> 00:18:21.420
+what you can do hash I'm just giving a name called&nbsp;
+to do task and I am giving equal to Ng model and&nbsp;&nbsp;
+
+00:18:21.420 --> 00:18:31.080
+I'm telling this field is required and there is a&nbsp;
+button here and this button will get disabled if&nbsp;&nbsp;
+
+00:18:32.340 --> 00:18:39.300
+to do task is invalid so sometimes it will be&nbsp;
+undefined so I am giving to exclamation here&nbsp;&nbsp;
+
+00:18:40.080 --> 00:18:44.220
+so let's see whether it is working or not&nbsp;
+so by default it is disabled and if you&nbsp;&nbsp;
+
+00:18:44.220 --> 00:18:48.840
+type something it is getting enabled and if you&nbsp;
+remove something it will throw some error and&nbsp;&nbsp;
+
+00:18:48.840 --> 00:18:54.240
+again the button will get disabled so the&nbsp;
+input box is also ready the next is when&nbsp;&nbsp;
+
+00:18:54.240 --> 00:18:58.440
+you click on this button you have to add the&nbsp;
+to-do which we have done for the update and&nbsp;&nbsp;
+
+00:18:58.440 --> 00:19:03.060
+delete the same thing we have to done for add&nbsp;
+as well so here you can go ahead with the own&nbsp;&nbsp;
+
+00:19:03.060 --> 00:19:09.900
+clip and add to do I don't have to pass any&nbsp;
+parameters because or those data will be new&nbsp;&nbsp;
+
+00:19:09.900 --> 00:19:19.260
+so I'm just taking this one and you will have&nbsp;
+the task from here so add to do just adding and&nbsp;&nbsp;
+
+00:19:20.280 --> 00:19:28.620
+console.log I am saying added you know that's&nbsp;
+it if you want you can see the task which we are&nbsp;&nbsp;
+
+00:19:28.620 --> 00:19:34.140
+using in NG model variable that will be available&nbsp;
+here also so I'm adding a task this dot task
+
+00:19:38.040 --> 00:19:42.420
+now we have partially done our to-do&nbsp;
+application with the mock data which&nbsp;&nbsp;
+
+00:19:42.420 --> 00:19:47.940
+we have written inside the TS file next&nbsp;
+we are moving to use a Json server which&nbsp;&nbsp;
+
+00:19:47.940 --> 00:19:52.920
+will help to create a rest API which is a&nbsp;
+fake rest API with the data we are giving&nbsp;&nbsp;
+
+00:19:53.700 --> 00:20:00.120
+for that you have to install the Json server using&nbsp;
+this command globally and after that you can go to&nbsp;&nbsp;
+
+00:20:00.120 --> 00:20:06.120
+the db.json you can go to the project and create&nbsp;
+any file name now I have created db.json file&nbsp;&nbsp;
+
+00:20:06.120 --> 00:20:12.480
+they copied the same data of the to-do's and&nbsp;
+pasted it here okay so to do is the key here&nbsp;&nbsp;
+
+00:20:13.800 --> 00:20:20.160
+the next step is you can go in the terminal and&nbsp;
+type Json server the path of the Json file you&nbsp;&nbsp;
+
+00:20:20.160 --> 00:20:27.960
+have created and in the watch then our to-do list&nbsp;
+will be available in this particular URL if you&nbsp;&nbsp;
+
+00:20:27.960 --> 00:20:33.240
+go here you can see if you type the to-do's&nbsp;
+it will available all the data which we have&nbsp;&nbsp;
+
+00:20:33.240 --> 00:20:40.860
+written in the db.json will be available in this&nbsp;
+URL that's it simple next we have to access this&nbsp;&nbsp;
+
+00:20:40.860 --> 00:20:46.860
+data and you have to use in the list right for&nbsp;
+that you have to create the service file now we&nbsp;&nbsp;
+
+00:20:46.860 --> 00:20:52.620
+don't have any service for file for connecting to&nbsp;
+the backend for that in order to create a service&nbsp;&nbsp;
+
+00:20:52.620 --> 00:20:58.920
+file using the CLA angular CLA you can use NG&nbsp;
+generate service then the service file name&nbsp;&nbsp;
+
+00:21:00.540 --> 00:21:06.360
+it will create surveys file inside the app folder&nbsp;
+go to the service file connect to the backend you&nbsp;&nbsp;
+
+00:21:06.360 --> 00:21:12.240
+have to use the HTTP client module so go to the&nbsp;
+app dot module.pts file and import HTTP client&nbsp;&nbsp;
+
+00:21:13.740 --> 00:21:16.860
+same thing needs to be added in the import section
+
+00:21:19.140 --> 00:21:23.400
+go to the service file again and&nbsp;
+you have to add HTTP client there
+
+00:21:25.800 --> 00:21:29.340
+then you have to use the&nbsp;
+Constructor with the HTTP client&nbsp;&nbsp;
+
+00:21:30.780 --> 00:21:36.720
+HTTP client now our base URL is localhost&nbsp;
+3000 so I am adding the base URL also
+
+00:21:39.540 --> 00:21:43.920
+now we have to write four functions&nbsp;
+one for get to-do list another for&nbsp;&nbsp;
+
+00:21:43.920 --> 00:21:47.100
+add to do then update to do and the delete to do&nbsp;&nbsp;
+
+00:21:49.080 --> 00:21:58.740
+so the first function we are going to write is get&nbsp;
+to do list and it will return this dot HTTP dot&nbsp;&nbsp;
+
+00:21:58.740 --> 00:22:09.000
+then get and I am going to write the base URL&nbsp;
+so dollar this dot base URL then slash to DOS
+
+00:22:11.160 --> 00:22:16.320
+in order to make sure our to-do is returning&nbsp;
+then let's talk to do which we have written&nbsp;&nbsp;
+
+00:22:16.320 --> 00:22:22.020
+already in the interface so to do and this&nbsp;
+is the structure you can make sure this is&nbsp;&nbsp;
+
+00:22:22.020 --> 00:22:28.440
+the data it is returning from the API which we&nbsp;
+have written before right so save so you will&nbsp;&nbsp;
+
+00:22:28.440 --> 00:22:33.600
+get the get to do list the similar way I am going&nbsp;
+to write for add to do delete to do update to do
+
+00:22:35.640 --> 00:22:41.820
+so add to do there will be some newly added data&nbsp;
+coming as a post data and we will pass to the URL&nbsp;&nbsp;
+
+00:22:41.820 --> 00:22:46.740
+so this is a post request and we are passing the&nbsp;
+second parameter as a post data while updating&nbsp;&nbsp;
+
+00:22:46.740 --> 00:22:53.280
+instead of post it will be patch and the base URL&nbsp;
+there will be an ID so which ID we are updating&nbsp;&nbsp;
+
+00:22:53.280 --> 00:22:58.260
+and we are updated data also we are passing&nbsp;
+here for the delay to do instead of patch it&nbsp;&nbsp;
+
+00:22:58.260 --> 00:23:04.620
+will be delete and we can mention which ID which&nbsp;
+record IDs we are deleting and you can pass that&nbsp;&nbsp;
+
+00:23:04.620 --> 00:23:11.880
+ID that's it so we completed the service file&nbsp;
+creation then based on each action you can call&nbsp;&nbsp;
+
+00:23:11.880 --> 00:23:17.940
+this function in the TS file and you can utilize&nbsp;
+that now we don't need the static data now you can&nbsp;&nbsp;
+
+00:23:17.940 --> 00:23:24.300
+remove this to those and I am declaring this is a&nbsp;
+to-do array and initially it will be empty on load&nbsp;&nbsp;
+
+00:23:24.300 --> 00:23:32.640
+we can update this particular value so for that&nbsp;
+you have to Implement a hook which is owned in it&nbsp;&nbsp;
+
+00:23:33.180 --> 00:23:40.500
+so that on the NG on it you can&nbsp;
+call a function this dot get list&nbsp;&nbsp;
+
+00:23:42.060 --> 00:23:50.460
+so this get list what we this get list will do we&nbsp;
+will call the service file function get to-do list&nbsp;&nbsp;
+
+00:23:50.460 --> 00:23:56.700
+for that you have to inject the app service in the&nbsp;
+app load component for injecting I am using the&nbsp;&nbsp;
+
+00:23:56.700 --> 00:24:03.000
+Constructor and I am giving a variable private app&nbsp;
+service and I am importing that app service file&nbsp;&nbsp;
+
+00:24:03.540 --> 00:24:09.120
+and in the get list by default onload it is&nbsp;
+calling the get list function which you have&nbsp;&nbsp;
+
+00:24:09.120 --> 00:24:15.780
+to call appservice Dot which function we have to&nbsp;
+do is get to-do list then you have to subscribe&nbsp;&nbsp;
+
+00:24:15.780 --> 00:24:26.760
+that function and it will return a response&nbsp;
+then this Dot to Do's so whatever the to-do's&nbsp;&nbsp;
+
+00:24:26.760 --> 00:24:33.120
+we have are it will be initially empty then you&nbsp;
+have to assign whatever the response coming you&nbsp;&nbsp;
+
+00:24:33.120 --> 00:24:39.300
+have to assign with this one you can put the&nbsp;
+call in places and you can mention it here&nbsp;&nbsp;
+
+00:24:40.440 --> 00:24:44.640
+see so you will get the to rows from&nbsp;
+the DB dot Json which we have mentioned&nbsp;&nbsp;
+
+00:24:45.720 --> 00:24:53.400
+so the dp.json you can see here we will get those&nbsp;
+data if you want to change the data to make sure&nbsp;&nbsp;
+
+00:24:53.400 --> 00:25:00.060
+you can check I'm just adding this data so this&nbsp;
+is getting updated and here also it is getting&nbsp;&nbsp;
+
+00:25:00.060 --> 00:25:05.400
+updated now you can make sure all the data is&nbsp;
+coming from the Json server not the static data we&nbsp;&nbsp;
+
+00:25:05.400 --> 00:25:11.220
+have removed all the static data right the similar&nbsp;
+way next thing else we have to check add to do&nbsp;&nbsp;
+
+00:25:11.220 --> 00:25:17.760
+while adding this data what will happen so while&nbsp;
+adding you will get a text while pressing the&nbsp;&nbsp;
+
+00:25:17.760 --> 00:25:23.760
+button that needs to be added in this particular&nbsp;
+list right so let's get started so for that&nbsp;&nbsp;
+
+00:25:24.660 --> 00:25:30.060
+in the HTML you will have a button there is a&nbsp;
+task whenever the value is getting updated the&nbsp;&nbsp;
+
+00:25:30.060 --> 00:25:34.560
+task is getting updated and when the button&nbsp;
+click add to do button click you have to pass&nbsp;&nbsp;
+
+00:25:34.560 --> 00:25:41.400
+this data to the back end right so going here we&nbsp;
+will get this dot task for that you have to call&nbsp;&nbsp;
+
+00:25:42.840 --> 00:25:51.600
+this dot app service dot add to do and you have&nbsp;
+to pass the data so the task should be this Dot&nbsp;&nbsp;
+
+00:25:51.600 --> 00:25:57.540
+task and the completed parameter will&nbsp;
+be initially it will be always false&nbsp;&nbsp;
+
+00:25:57.540 --> 00:26:04.380
+right it is not completed so it will&nbsp;
+be false then subscribe in the response
+
+00:26:07.920 --> 00:26:11.700
+you can check console.log of&nbsp;
+what response that is giving
+
+00:26:13.920 --> 00:26:17.940
+so going to the application again inspect
+
+00:26:20.820 --> 00:26:28.320
+and I'm adding some data in the console you can&nbsp;
+see if I click on it the data getting added so it&nbsp;&nbsp;
+
+00:26:28.320 --> 00:26:34.200
+is returning the ID but the data is not showing&nbsp;
+here so we need a refresh right after refresh&nbsp;&nbsp;
+
+00:26:34.200 --> 00:26:39.840
+it is getting updated so in order to avoid the&nbsp;
+manual refresh once the data is updated you can&nbsp;&nbsp;
+
+00:26:39.840 --> 00:26:49.560
+call this get list function so this dot get list&nbsp;
+function you can add here now you can see once I&nbsp;&nbsp;
+
+00:26:49.560 --> 00:26:55.260
+added the data it is getting added at the bottom&nbsp;
+of the page so add to do is done but you can see&nbsp;&nbsp;
+
+00:26:55.260 --> 00:27:02.460
+this value is not getting cleared right so for&nbsp;
+that purpose you can do once this is done you&nbsp;&nbsp;
+
+00:27:02.460 --> 00:27:08.100
+can make the task is equal to empty right but&nbsp;
+there is a problem here so if I add some data&nbsp;&nbsp;
+
+00:27:08.100 --> 00:27:12.960
+and press click we are adding a validation&nbsp;
+right so on dirty we are adding a validation&nbsp;&nbsp;
+
+00:27:13.620 --> 00:27:19.020
+so if the data is added it is getting empty but&nbsp;
+there is a validation cell in order to avoid that&nbsp;&nbsp;
+
+00:27:19.020 --> 00:27:25.320
+since we are using NG model we can clear we can&nbsp;
+reset the value using this particular one for&nbsp;&nbsp;
+
+00:27:25.320 --> 00:27:30.480
+that what you have to do is you have to go to the&nbsp;
+component.ts file and you can use the view child&nbsp;&nbsp;
+
+00:27:31.620 --> 00:27:37.260
+so I am adding a view child and to do task&nbsp;
+is a value which we have referred here as a&nbsp;&nbsp;
+
+00:27:37.260 --> 00:27:45.600
+hash to do so and I am giving any here and I am&nbsp;
+updating the angular core section okay so that&nbsp;&nbsp;
+
+00:27:45.600 --> 00:27:54.480
+is done then you can come here instead of this&nbsp;
+one you can take this Dot to do task dot reset&nbsp;&nbsp;
+
+00:27:55.860 --> 00:27:58.980
+then it will reset let's see&nbsp;
+whether it is working or not&nbsp;&nbsp;
+
+00:28:00.300 --> 00:28:06.000
+adding the data see it is resetting and the&nbsp;
+button is disabled no validation error is&nbsp;&nbsp;
+
+00:28:06.000 --> 00:28:13.020
+coming there okay so that part is done the similar&nbsp;
+way next is update to do so when you click on the&nbsp;&nbsp;
+
+00:28:13.020 --> 00:28:17.760
+checkbox so now the checkbox is updated there we&nbsp;
+are calling the update to do that means uncheck&nbsp;&nbsp;
+
+00:28:17.760 --> 00:28:21.600
+will be checked or check will be unchecked&nbsp;
+right we have to update the checkbox value&nbsp;&nbsp;
+
+00:28:22.620 --> 00:28:29.280
+so here we are calling the update to do here&nbsp;
+and we are consoling it for that what you can&nbsp;&nbsp;
+
+00:28:29.280 --> 00:28:38.340
+do you can call this dot app service Dot update&nbsp;
+to do and only we are changing the checkbox right&nbsp;&nbsp;
+
+00:28:38.340 --> 00:28:45.840
+the remaining things are same so dot dot dot to do&nbsp;
+that means all the remaining data I am passing but&nbsp;&nbsp;
+
+00:28:45.840 --> 00:28:53.880
+only I am changing insert completed one okay so&nbsp;
+for that I'm just making it as an any for now or&nbsp;&nbsp;
+
+00:28:53.880 --> 00:28:58.800
+there will be check box event yeah checkbox change&nbsp;
+even this there you can pass the checkbox change&nbsp;&nbsp;
+
+00:28:58.800 --> 00:29:05.100
+even then only we are changing the completed for&nbsp;
+changing the completed from the checkbox event e&nbsp;&nbsp;
+
+00:29:05.100 --> 00:29:10.080
+you will get an item called checked so which&nbsp;
+can be either false or true so based on the&nbsp;&nbsp;
+
+00:29:10.080 --> 00:29:15.000
+change it will we will get the current value&nbsp;
+of the checkbox and the remaining name we are&nbsp;&nbsp;
+
+00:29:15.000 --> 00:29:22.320
+not changing so we are passing the same thing&nbsp;
+here and we are subscribing then press fonts
+
+00:29:25.620 --> 00:29:27.960
+we are just consulted log of&nbsp;&nbsp;
+
+00:29:29.520 --> 00:29:34.260
+response that's it because we we don't need&nbsp;
+to update the list because when we click on&nbsp;&nbsp;
+
+00:29:34.260 --> 00:29:39.180
+the check box it will be there itself right&nbsp;
+if we have a multiple users uh then it to do&nbsp;&nbsp;
+
+00:29:39.180 --> 00:29:44.520
+is only for in our purpose if you have multiple&nbsp;
+users are there adding it deleting it then what&nbsp;&nbsp;
+
+00:29:44.520 --> 00:29:49.560
+you can do is then you can refresh this get list&nbsp;
+but here for to do application it's not really&nbsp;&nbsp;
+
+00:29:49.560 --> 00:29:57.540
+required to re call the get list similar way we&nbsp;
+have in the done in the add to do so coming here&nbsp;&nbsp;
+
+00:29:57.540 --> 00:30:03.060
+I am editing so even though I am refreshing this&nbsp;
+is reflected right so it is getting updated the&nbsp;&nbsp;
+
+00:30:03.060 --> 00:30:08.520
+APA call is going and it is getting updated&nbsp;
+so if you want to make sure inspect console
+
+00:30:10.560 --> 00:30:17.100
+see it is getting updated all the data is&nbsp;
+coming okay so the update to do is done next&nbsp;&nbsp;
+
+00:30:17.100 --> 00:30:24.540
+reminding the thing is delete to do so delete to&nbsp;
+do you can simply call the this dot app service&nbsp;&nbsp;
+
+00:30:25.200 --> 00:30:36.180
+Dot do you need to do then ID don't subscribe&nbsp;
+then you will get the response and once the&nbsp;&nbsp;
+
+00:30:36.180 --> 00:30:40.200
+response you got you have to refresh the list&nbsp;
+otherwise you have to manually refresh in order&nbsp;&nbsp;
+
+00:30:40.200 --> 00:30:47.400
+to remove that record from the list right so I'm&nbsp;
+just calling this dot get list function that's it&nbsp;&nbsp;
+
+00:30:48.900 --> 00:30:54.660
+so closing this one and I am deleting it&nbsp;
+is getting deleted deleted deleted see I'm&nbsp;&nbsp;
+
+00:30:54.660 --> 00:31:00.300
+adding a new one I'm adding and removing&nbsp;
+there is an validation there and adding
+
+00:31:02.820 --> 00:31:09.720
+make it updated so everything is working fine&nbsp;
+so this is our to do with our fake Json server
+

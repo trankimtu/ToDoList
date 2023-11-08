@@ -1,62 +1,27 @@
-# ToDoList
+# Todolist
 
-## A. Setup
-### I. Install primeng, primeicons, primeflex
-```
-  npm i primeng primeicons primeflex
-```
-Check package.json to know if they installed or not
-```
-    "primeflex": "^3.3.1",
-    "primeicons": "^6.0.1",
-    "primeng": "^16.5.0",
-```
-### II. Add styles
-In angular.json, under styles section, add
-```
-    "styles": [
-        "src/styles.css",
-        "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-        "node_modules/primeng/resources/primeng.min.css",
-        "node_modules/primeflex/primeflex.css",
-        "node_modules/primeicons/primeicons.css"
-      ],
-```
-## B. Add PrimeNG Card component
-### I. In ```app.module.ts``` add 
-``` import { CardModule } from 'primeng/card';``` and ```CardModule``` in imports array<br>
-### II. html file
-Copy and paste primeNG template to html file
-If running ng serve, need to restart to see the style apply<br>
-Make the p-card class w-6 to make it 60% width and change title to "Todo"
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-## C. Add PrimeNG Table component
-```import { TableModule } from 'primeng/table';``` and ```TableModule``` in imports array<br>
-Pass ```todos``` array to the value property of ```p-table```<br>
-Define ```todos``` array in ```app.component.ts```<br>
-```
-    todos = [
-    {
-      id: 1,
-      task: 'first dodo',
-      completed: true
-    },
-    {
-      id: 2,
-      task: 'second dodo',
-      completed: false
-    },
-  ]
-```
-Use ```let-todo``` to load each object of array todos
-Output ```{{ todo.task }}``` to browser for testing
+## Development server
 
-## D. Add PrimeNG Checkbox component
-```import { CheckboxModule } from 'primeng/checkbox';``` and ```CheckboxModule``` in imports array<br>
-CheckboxModule is a form element which leads to
-```import { FormsModule } from '@angular/forms'; // for ngModel``` and ```FormsModule``` in imports array<br>
-Bind ```[(ngModel)]``` to ```todo.completed```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## E. Add PrimeNG check button component
-```import { ButtonModule } from 'primeng/checkbox';``` and ```ButtonModule``` in imports array<br>
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
